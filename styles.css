@@ -376,8 +376,20 @@ body {
 }
 
 /* Project Cards */
+.project-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+.project-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .project-card {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     border: none;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     border-radius: 15px;
@@ -386,39 +398,17 @@ body {
     height: 100%;
 }
 
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(13,148,136,0.9), rgba(217,119,6,0.9));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-}
-
-.project-icon {
-    font-size: 4rem;
-    color: white;
-    transform: scale(0) rotate(-180deg);
-    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-.project-card:hover .project-icon {
-    transform: scale(1) rotate(0deg);
-}
-
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(13,148,136,0.18);
+}
+
+.project-card .card-title {
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .card-title {
+    color: var(--secondary-color);
 }
 
 .badge-container {
